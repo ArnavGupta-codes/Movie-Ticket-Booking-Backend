@@ -32,12 +32,13 @@ const getMovies = async (req, res) => {
 
 
 const addMovie = async (req, res) => {
-  const { name, availableSeats, time } = req.body;
+  const { name, availableSeats, date, time } = req.body;
   
   try {
     const movie = new Movie({
       name,
       availableSeats,
+      date,
       time,
       image: req.file.path
     });

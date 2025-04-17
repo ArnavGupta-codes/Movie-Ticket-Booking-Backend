@@ -1,8 +1,8 @@
-require('dotenv').config(); // Ensure environment variables are loaded
+require('dotenv').config(); //Environment
 const jwt = require('jsonwebtoken');
 
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjdlODJkMjgzMWIxNmQyNTA3ODY0NzEzIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc0MzUyNTQ0NSwiZXhwIjoxNzQ2MTE3NDQ1fQ.2Nl7ucQYftK3SyCjq2xnuHyvTehwZlS5eUzS1oCHOSo"; // Replace with your actual token
-const secret = process.env.JWT_SECRET; // Ensure it matches your backend
+const secret = process.env.JWT_SECRET;
 
 try {
     const decoded = jwt.verify(token, secret);

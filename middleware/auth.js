@@ -9,8 +9,6 @@ const protect = async (req, res, next) => {
       token = req.headers.authorization.split(' ')[1];
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       console.log("Decoded Token:", decoded);
-
-      // Extract correct ID based on token structure
       req.user = await User.findById(decoded.user.id).select('-password');
       console.log("User from DB:", req.user);
 

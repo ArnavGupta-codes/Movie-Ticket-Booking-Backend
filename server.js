@@ -4,6 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const connectDB = require("./config/db");
 
+
 dotenv.config();
 console.log("MONGO_URI:", process.env.MONGO_URI);
 connectDB()

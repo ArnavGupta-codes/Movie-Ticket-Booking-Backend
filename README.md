@@ -86,10 +86,15 @@ Add appropriate fields and movie image.
   "seats": <no.>
 }
 ```
+Response:
 
-**Response:** Returns booking ID and related information.
+If booking is successful: Returns booking ID and related information.
 
----
+If not enough seats are available:
+
+{
+  "message": "Not enough seats available"
+}
 
 ### 7. Get User Bookings
 **Endpoint:** `GET /api/bookings/mybookings`
